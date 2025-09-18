@@ -1,0 +1,532 @@
+/* Overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1000;
+}
+#date-picker-group{
+  margin-left: 20px;
+}
+
+.react-datepicker__month-container{
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Sidebar */
+.sidebar {
+  width: 35%;
+  height: 100%;
+  background: #fff;
+  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  animation: slideIn 0.3s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Header with bottom border */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #343a40;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #555;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #000;
+  background-color: #f8f9fa;
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  color: #495057;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Description text - italic styling */
+.description {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #6c757d;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* Knowledge Base Container */
+.knowledge-base-container {
+  min-height: 40px;
+  padding: 8px;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+}
+
+/* Tools Container */
+.tools-container {
+  min-height: 40px;
+  padding: 8px;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+}
+
+.no-selection {
+  color: #6c757d;
+  font-style: italic;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+
+/* Tags (badges) */
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #e9f2ff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: #0056b3;
+  border: 1px solid #cce0ff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Removable tags (Knowledge Base chips) */
+.removable-tag {
+  padding-right: 8px;
+}
+
+.remove-tag-btn {
+  background: none;
+  border: none;
+  color: #0056b3;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.remove-tag-btn:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* Read-only tags (Knowledge Base Tools) */
+.readonly-tag {
+  background: #e8f5e8;
+  color: #2d5a2d;
+  border: 1px solid #c3e6c3;
+  cursor: default;
+}
+
+/* Run Button with rounded corners */
+.run-btn-container {
+  margin-top: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px;
+}
+
+.run-btn {
+  background: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px; /* More rounded */
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.2);
+}
+
+.run-btn:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.run-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  .sidebar-header h2 {
+    font-size: 1.3rem;
+  }
+}
+
+
+/* Add these styles to your existing AgentSideBar.css */
+
+/* Category Badge Styles */
+.category-badge {
+  display: inline-block;
+  background-color: #e3f2fd;
+  color: #1976d2;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+  border: 1px solid #bbdefb;
+}
+
+/* Toggle Controls Container */
+.toggle-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* Individual Toggle Item */
+.toggle-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.toggle-label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Toggle Switch Styles */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.3s ease;
+  border-radius: 24px;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.3s ease;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .toggle-slider {
+  background-color: #2196F3;
+}
+
+input:focus + .toggle-slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(20px);
+}
+
+/* Hover effects for toggle */
+.toggle-switch:hover .toggle-slider {
+  background-color: #bbb;
+}
+
+.toggle-switch:hover input:checked + .toggle-slider {
+  background-color: #1976d2;
+}
+
+/* Dynamic Input Parameters Styles */
+.sidebar-content {
+  padding: 0 20px 20px 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.input-params-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.dynamic-inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-row-container {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: #fafbfc;
+}
+
+.input-row-main {
+  width: 100%;
+}
+
+.input-row-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.param-name-input,
+.param-value-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.param-name-input:focus,
+.param-value-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Circle Buttons */
+.add-circle-btn,
+.remove-circle-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.2s ease;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.add-circle-btn {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.add-circle-btn:hover {
+  background-color: #28a745;
+  color: white;
+  transform: scale(1.1);
+}
+
+.add-circle-btn:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.remove-circle-btn {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+.remove-circle-btn:hover {
+  background-color: #dc3545;
+  color: white;
+  transform: scale(1.1);
+}
+
+.remove-circle-btn:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.add-circle-btn.small,
+.remove-circle-btn.small {
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+}
+
+.add-circle-btn:disabled,
+.remove-circle-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Additional Parameters */
+.additional-params-container {
+  margin-top: 12px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.additional-param-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.additional-param-name,
+.additional-param-value {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 13px;
+  background-color: white;
+}
+
+.additional-param-name:focus,
+.additional-param-value:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25);
+}
+
+/* Error message styling */
+.error {
+  margin-top: 16px;
+  padding: 12px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* Status info */
+.status-info {
+  color: #28a745;
+  font-size: 14px;
+  font-weight: 500;
+}
