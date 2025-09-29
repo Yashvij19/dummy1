@@ -1,47 +1,56 @@
 {
   "agents": [
+    
     {
-      "id": "a4aac76f-61f7-4390-aca4-10d5d575be10",
-      "agentName": "anonmus",
-      "category": "industry",
-      "Description": "jkjljojo",
-      "inputValueData": [
-        {
-          "Display Name": "Sector",
-          "Control Type": "FreeTextBox",
-          "IsMultivalue Allowed": true,
-          "Is Required": true,
-          "Default Value": "yash , vijay"
-        },
-        {
-          "Display Name": "Geography",
-          "Control Type": "FreeTextBox",
-          "IsMultivalue Allowed": false,
-          "Is Required": true,
-          "Default Value": "None"
-        },
-        {
-          "Display Name": "Time Period",
-          "Control Type": "Date",
-          "IsMultivalue Allowed": false,
-          "Is Required": true,
-          "Default Value": "01-Jan-2025|30-Sep-2025"
-        },
-        {
-          "Display Name": "Business Function",
-          "Control Type": "FreeTextBox",
-          "IsMultivalue Allowed": false,
-          "Is Required": true,
-          "Default Value": "None"
-        },
-        {
-          "Display Name": "Knowledge Type",
-          "Control Type": "MultiSelect",
-          "IsMultivalue Allowed": true,
-          "Is Required": false,
-          "Default Value": "InsightFirst"
-        }
-      ]
+  "id": "a4aac76f-61f7-4390-aca4-10d5d575be10",
+  "agentName": "anonmus",
+  "category": "industry",
+  "Description": "jkjljojo",
+  "inputValueData": [
+    {
+      "Display Name": "Sector",
+      "Control Type": "FreeTextBox",
+      "IsMultivalue Allowed": false,
+      "Is Required": true,
+      "Default Value": "None",
+      "IsEditable": true
+    },
+    {
+      "Display Name": "Geography",
+      "Control Type": "FreeTextBox",
+      "IsMultivalue Allowed": false,
+      "Is Required": true,
+      "Default Value": "None",
+      "IsEditable": true
+    },
+    {
+      "Display Name": "Time Period",
+      "Control Type": "Date",
+      "IsMultivalue Allowed": false,
+      "Is Required": true,
+      "Default Value": "01-Jan-2025|30-Sep-2025",
+      "IsEditable": true
+    },
+    {
+      "Display Name": "Business Function",
+      "Control Type": "FreeTextBox",
+      "IsMultivalue Allowed": false,
+      "Is Required": true,
+      "Default Value": "None",
+      "IsEditable": true
+    },
+    {
+      "Display Name": "Knowledge Type",
+      "Control Type": "MultiSelect",
+      "IsMultivalue Allowed": true,
+      "Is Required": false,
+      "Default Value": "InsightFirst",
+      "IsEditable": true
     }
   ]
 }
+  ]
+}
+
+
+
